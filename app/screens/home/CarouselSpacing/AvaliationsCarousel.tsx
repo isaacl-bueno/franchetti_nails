@@ -11,14 +11,14 @@ import {
 
 export function AvaliationsCarousel() {
   return (
-    <Carousel className="w-full max-w-lg">
-      <CarouselContent className="-ml-1">
+    <Carousel className="w-full max-w-xs">
+      <CarouselContent>
         {Array.from({ length: 5 }).map((_, index) => (
-          <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/2">
+          <CarouselItem key={index}>
             <div className="p-1">
               <Card>
                 <CardContent className="flex aspect-square items-center justify-center p-6">
-                  <span className="text-2xl font-semibold">{index + 1}</span>
+                  <span className="text-4xl font-semibold">{index + 1}</span>
                 </CardContent>
               </Card>
             </div>
