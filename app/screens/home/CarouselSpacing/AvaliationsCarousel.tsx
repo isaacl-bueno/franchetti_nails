@@ -9,11 +9,11 @@ import {
   CarouselPrevious,
 } from "@/components/ui/carousel"
 
-export function ImageCarousel() {
+export function AvaliationsCarousel() {
   return (
-    <Carousel className="w-full max-w-sm">
+    <Carousel className="w-full max-w-lg">
       <CarouselContent className="-ml-1">
-        {Array.from({ length: 3 }).map((_, index) => (
+        {Array.from({ length: 5 }).map((_, index) => (
           <CarouselItem key={index} className="pl-1 md:basis-1/2 lg:basis-1/2">
             <div className="p-1">
               <Card>
