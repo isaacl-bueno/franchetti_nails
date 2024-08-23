@@ -1,16 +1,24 @@
 "use client";
 import React, { useState } from "react";
 import Image from "next/image";
-import { Button } from "@/components/ui/button";
-
+import { Modal } from "../components/modal";
+import Carrousel1 from "@/public/imagem1.jpg";
+import Carrousel2 from "@/public/imagem2.png";
+import Carrousel3 from "@/public/imagem3.jpg";
 import imageLogo from "@/public/logoamanda.png";
 import imageLogoInverted from "@/public/logoinvertida.png";
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
-// import service1Image from "@/public/service1.jpg";
-// import service2Image from "@/public/service2.jpg";
-// import service3Image from "@/public/service3.jpg";
+import { Button } from "@/components/ui/button";
 
-const ServicesPage: React.FC = () => {
+const images = [
+    { src: Carrousel1, width: 800, height: 600 },
+    { src: Carrousel2, width: 800, height: 600 },
+    { src: Carrousel3, width: 800, height: 600 }
+];
+
+const GalleryPage: React.FC = () => {
+    const [selectedImage, setSelectedImage] = useState<typeof Carrousel1 | null>(null);
+    const [isModalOpen, setIsModalOpen] = useState(false);
     const [isMenuOpen, setIsMenuOpen] = useState(false);
 
     const toggleMenu = () => {
@@ -32,8 +40,19 @@ const ServicesPage: React.FC = () => {
             className="w-[200px] h-[85px] max-w-xs "
         />
     );
+
+    const openModal = (image: typeof Carrousel1) => {
+        setSelectedImage(image);
+        setIsModalOpen(true);
+    };
+
+    const closeModal = () => {
+        setSelectedImage(null);
+        setIsModalOpen(false);
+    };
+
     return (
-        <div className="flex flex-col min-h-screen">
+        <div className="min-h-screen bg-gray-100">
             <header className="bg-white shadow-md w-full">
                 <nav className="max-w-7xl mx-auto p-4 flex justify-between items-center">
                     {renderLogo()}
@@ -117,70 +136,45 @@ const ServicesPage: React.FC = () => {
                     </div>
                 )}
             </header>
-
-            <main className="flex-grow p-8 bg-gray-100">
-                <section className="text-center mb-12">
-                    <h1 className="text-3xl font-bold text-[#F092A1] mb-4">Nossos Serviços</h1>
-                    <p className="text-lg text-gray-700">
-                        Descubra os serviços excepcionais que oferecemos para atender suas necessidades. Cada serviço é cuidadosamente elaborado para garantir a máxima qualidade e satisfação.
-                    </p>
-                </section>
-
-                <section className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-                    <div className="bg-white shadow-lg rounded-lg p-6">
-                        {/* <Image src={service1Image} alt="Serviço 1" className="w-full h-40 object-cover rounded-t-lg" /> */}
-                        <h2 className="text-xl font-bold text-[#F092A1] mt-4">Serviço 1</h2>
-                        <p className="text-gray-700 mt-2">
-                            Descrição do Serviço 1. Explique o que é oferecido e quais são os benefícios para o cliente.
-                        </p>
-                        <Button variant={"outline"} className="mt-4" onClick={() => {/* Handle click */ }}>Saiba mais</Button>
-                    </div>
-
-                    <div className="bg-white shadow-lg rounded-lg p-6">
-                        {/* <Image src={service2Image} alt="Serviço 2" className="w-full h-40 object-cover rounded-t-lg" /> */}
-                        <h2 className="text-xl font-bold text-[#F092A1] mt-4">Serviço 2</h2>
-                        <p className="text-gray-700 mt-2">
-                            Descrição do Serviço 2. Detalhes sobre o que é oferecido e seus benefícios.
-                        </p>
-                        <Button variant={"outline"} className="mt-4" onClick={() => {/* Handle click */ }}>Saiba mais</Button>
-                    </div>
-
-                    <div className="bg-white shadow-lg rounded-lg p-6">
-                        {/* <Image src={service3Image} alt="Serviço 3" className="w-full h-40 object-cover rounded-t-lg" /> */}
-                        <h2 className="text-xl font-bold text-[#F092A1] mt-4">Serviço 3</h2>
-                        <p className="text-gray-700 mt-2">
-                            Descrição do Serviço 3. Explique o serviço e os benefícios para o cliente.
-                        </p>
-                        <Button variant={"outline"} className="mt-4" onClick={() => {/* Handle click */ }}>Saiba mais</Button>
-                    </div>
-                </section>
-
-                <section className="text-center mb-12">
-                    <h2 className="text-2xl font-bold text-[#F092A1] mb-6">Perguntas Frequentes</h2>
-                    <div className="text-left max-w-2xl mx-auto">
-                        <h3 className="text-xl font-semibold text-gray-800">Como posso solicitar um serviço?</h3>
-                        <p className="text-gray-700 mt-2">
-                            Você pode entrar em contato conosco através do botão de contato ou solicitar um orçamento diretamente no site.
-                        </p>
-
-                        <h3 className="text-xl font-semibold text-gray-800 mt-4">Qual é o tempo de espera para começar um serviço?</h3>
-                        <p className="text-gray-700 mt-2">
-                            O tempo de espera pode variar dependendo da demanda. Normalmente, entramos em contato em até 48 horas para confirmar detalhes.
-                        </p>
-                    </div>
-                </section>
-
-                <section className="text-center">
+            <main className="p-6">
+                <h1 className="text-3xl font-bold text-center mb-8 text-[#F092A1]">Galeria</h1>
+                <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
+                    {images.map((image, index) => (
+                        <div key={index} className="relative cursor-pointer">
+                            <Image
+                                src={image.src}
+                                alt={`Galeria ${index}`}
+                                width={image.width}
+                                height={image.height}
+                                className="w-full h-auto object-cover rounded-lg"
+                                onClick={() => openModal(image.src)}
+                            />
+                        </div>
+                    ))}
+                </div>
+                {isModalOpen && (
+                    <Modal onClose={closeModal}>
+                        {selectedImage && (
+                            <Image
+                                src={selectedImage}
+                                alt="Imagem em destaque"
+                                width={1200}
+                                height={800}
+                                className="w-full h-auto"
+                            />
+                        )}
+                    </Modal>
+                )}
+                <div className="flex justify-center mt-8">
                     <Button
                         variant={"outline"}
                         className="px-6 py-3 bg-transparent text-[#F092A1] border-[#F092A1] rounded-lg hover:bg-[#F092A1] hover:text-white"
-                        onClick={() => {/* Handle contact click */ }}
+                        onClick={() => window.open("https://www.instagram.com/amanda_francheti", "_blank")}
                     >
-                        Entre em Contato
+                        Ver mais
                     </Button>
-                </section>
+                </div>
             </main>
-
             <footer className="bg-[#F092A1] py-8 flex flex-wrap justify-center items-center space-y-8 lg:space-y-0 lg:space-x-14 text-center">
                 <div className="w-full lg:w-auto flex flex-col items-center ">
                     {renderLogoInverted()}
@@ -220,4 +214,4 @@ const ServicesPage: React.FC = () => {
     );
 };
 
-export default ServicesPage;
+export default GalleryPage;

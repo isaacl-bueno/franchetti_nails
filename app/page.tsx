@@ -50,6 +50,14 @@ const HomePage: React.FC = () => {
         <nav className="max-w-7xl mx-auto p-4 flex justify-between items-center">
           {renderLogo()}
           <div className="lg:hidden">
+            <a
+              href="https://wa.me/5541991119239?text=Olá,%20vim%20pelo%20site%20e%20gostaria%20de%20saber%20mais%20sobre%20seus%20serviços!"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="hover:text-gray-300"
+            >
+              <FaWhatsapp className="text-white text-4xl" />
+            </a>
             <button
               onClick={toggleMenu}
               aria-label="Toggle Menu"
@@ -71,7 +79,7 @@ const HomePage: React.FC = () => {
               </svg>
             </button>
           </div>
-          <ul className={`lg:flex space-x-8 ${isMenuOpen ? "block" : "hidden"} lg:block`}>
+          {!isMenuOpen && (<ul className={`lg:flex space-x-8 ${isMenuOpen ? "block" : "hidden"} lg:block`}>
             <li>
               <a href="/" className="text-[#F092A1] hover:text-gray-900">
                 INÍCIO
@@ -92,7 +100,7 @@ const HomePage: React.FC = () => {
                 CONTATO
               </a>
             </li>
-          </ul>
+          </ul>)}
         </nav>
         {isMenuOpen && (
           <div className="lg:hidden block bg-white shadow-md p-4">
