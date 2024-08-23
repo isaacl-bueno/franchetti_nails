@@ -73,7 +73,7 @@ const HomePage: React.FC = () => {
           </div>
           <ul className={`lg:flex space-x-8 ${isMenuOpen ? "block" : "hidden"} lg:block`}>
             <li>
-              <a href="#inicio" className="text-[#F092A1] hover:text-gray-900">
+              <a href="/" className="text-[#F092A1] hover:text-gray-900">
                 INÍCIO
               </a>
             </li>
@@ -83,12 +83,12 @@ const HomePage: React.FC = () => {
               </a>
             </li>
             <li>
-              <a href="#galeria" className="text-[#F092A1] hover:text-gray-900">
+              <a href="/galeria" className="text-[#F092A1] hover:text-gray-900">
                 GALERIA
               </a>
             </li>
             <li>
-              <a href="#contato" className="text-[#F092A1] hover:text-gray-900">
+              <a href="/contato" className="text-[#F092A1] hover:text-gray-900">
                 CONTATO
               </a>
             </li>
@@ -98,7 +98,7 @@ const HomePage: React.FC = () => {
           <div className="lg:hidden block bg-white shadow-md p-4">
             <ul className="flex flex-col space-y-4">
               <li>
-                <a href="#inicio" className="text-[#F092A1] hover:text-gray-900">
+                <a href="/" className="text-[#F092A1] hover:text-gray-900">
                   INÍCIO
                 </a>
               </li>
@@ -108,12 +108,12 @@ const HomePage: React.FC = () => {
                 </a>
               </li>
               <li>
-                <a href="#galeria" className="text-[#F092A1] hover:text-gray-900">
+                <a href="/galeria" className="text-[#F092A1] hover:text-gray-900">
                   GALERIA
                 </a>
               </li>
               <li>
-                <a href="#contato" className="text-[#F092A1] hover:text-gray-900">
+                <a href="/contato" className="text-[#F092A1] hover:text-gray-900">
                   CONTATO
                 </a>
               </li>
