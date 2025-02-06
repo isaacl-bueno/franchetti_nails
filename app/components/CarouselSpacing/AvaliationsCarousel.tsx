@@ -42,37 +42,59 @@ const reviews = [
     review: "Muito bom! Amanda é dedicada e atenciosa, recomendo super.",
     rating: 5,
   },
+  
 ];
 
 export function AvaliationsCarousel() {
+  const [currentIndex, setCurrentIndex] = React.useState(0);
+
+  const handleNext = () => {
+    setCurrentIndex((prevIndex) => (prevIndex + 1) % reviews.length);
+  };
+
+  const handlePrevious = () => {
+    setCurrentIndex((prevIndex) => (prevIndex - 1 + reviews.length) % reviews.length);
+  };
+
+  React.useEffect(() => {
+    console.log("Current index changed to", currentIndex);
+  }, [currentIndex]);
+
   return (
-    <Carousel className="w-full max-w-xs">
-      <CarouselContent>
-        {reviews.map((review) => (
-          <CarouselItem key={review.id}>
-            <div className="p-1">
-              <Card>
-                <CardContent className="flex flex-col items-center justify-center p-6">
-                  <h3 className="text-xl font-semibold">{review.name}</h3>
-                  <p className="text-gray-600 mt-2">{review.review}</p>
-                  <div className="flex mt-4">
-                    {Array.from({ length: 5 }, (_, i) => (
-                      <FaStar
-                        key={i}
-                        className={`h-5 w-5 ${
-                          i < review.rating ? "text-yellow-400" : "text-gray-300"
-                        }`}
-                      />
-                    ))}
-                  </div>
-                </CardContent>
-              </Card>
-            </div>
-          </CarouselItem>
-        ))}
-      </CarouselContent>
-      <CarouselPrevious className="hidden sm:block" />
-      <CarouselNext className="hidden sm:block" />
-    </Carousel>
+    <div className="relative">
+      <Carousel className="w-full max-w-xs">
+        <CarouselContent>
+          {reviews.map((review, index) => (
+            <CarouselItem key={review.id}>
+              <div className="p-1">
+                <Card>
+                  <CardContent className="flex flex-col items-center justify-center p-6">
+                    <h3 className="text-xl font-semibold">{review.name}</h3>
+                    <p className="text-gray-600 mt-2">{review.review}</p>
+                    <div className="flex mt-4">
+                      {Array.from({ length: 5 }, (_, i) => (
+                        <FaStar
+                          key={i}
+                          className={`h-5 w-5 ${
+                            i < review.rating ? "text-yellow-400" : "text-gray-300"
+                          }`}
+                        />
+                      ))}
+                    </div>
+                  </CardContent>
+                </Card>
+              </div>
+            </CarouselItem>
+          ))}
+        </CarouselContent>
+        <CarouselPrevious className="hidden sm:block" onClick={handlePrevious} />
+        <CarouselNext className="hidden sm:block" onClick={handleNext} />
+      </Carousel>
+      <div className="bottom-0 left-0 right-0 text-center p-4 sm:hidden bg-transparent">
+        <p className="text-sm text-gray-600">
+          {currentIndex + 1} / {reviews.length}
+        </p>
+      </div>
+    </div>
   );
 }
