@@ -48,7 +48,7 @@ const ContactPage: React.FC = () => {
     };
 
     return (
-        <div className="min-h-screen bg-gray-100">
+        <div className="min-h-screen flex flex-col bg-gray-100">
             <header className="bg-white shadow-md w-full">
             <nav className="max-w-7xl mx-auto p-4 flex justify-between items-center">
                     {renderLogo()}
@@ -132,7 +132,7 @@ const ContactPage: React.FC = () => {
                     </div>
                 )}
             </header>
-            <main className="p-6">
+            <main className="p-6 flex-1">
                 <h1 className="text-3xl font-bold text-center mb-8 text-[#F092A1]">Contato</h1>
                 <div className="flex flex-col md:flex-row gap-12">
                     {/* Formulário de Contato */}

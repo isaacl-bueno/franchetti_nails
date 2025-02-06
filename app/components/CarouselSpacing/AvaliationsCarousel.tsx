@@ -13,7 +13,7 @@ const reviews = [
   {
     id: 1,
     name: "Sandra",
-    review: "O atendimento foi excepcional! Resolvi todas as minhas dúvidas e saí muito satisfeita com o serviço.",
+    review: "O atendimento foi excepcional! Amanda conseguiu me ajudar me ajudar com os problemas que tenho e as unhas duraram uma vida, ja marquei a volta.",
     rating: 5,
   },
   {
@@ -25,20 +25,20 @@ const reviews = [
   {
     id: 3,
     name: "Sofia",
-    review: "Gostei bastante do atendimento.",
+    review: "Gostei bastante do atendimento e do serviço.",
     rating: 4,
   },
   {
     id: 4,
     name: "Beatriz",
-    review: "Serviço de alta qualidade.",
-    rating: 4,
+    review: "Serviço de alta qualidade, profissional competente e muito gentil, adorei o cafezin que tomamos antes.",
+    rating: 5,
   },
   {
     id: 5,
     name: "Giseli",
-    review: "Muito bom! Amanda é dedicada e atenciosa.",
-    rating: 4,
+    review: "Muito bom! Amanda é dedicada e atenciosa, recomendo super.",
+    rating: 5,
   },
 ];
 

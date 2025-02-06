@@ -5,10 +5,10 @@ import { Button } from "@/components/ui/button";
 
 import imageLogo from "@/public/logoamanda.png";
 import imageLogoInverted from "@/public/logoinvertida.png";
+import AlongamentoFibradeVidro from "@/public/AlongamentoFibradeVidro.jpg";
+import BanhoDeGel from "@/public/BanhoDeGel.jpg";
+import EsmaltacaoEmGel from "@/public/EsmaltaçãoEmGel.jpg";
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
-// import service1Image from "@/public/service1.jpg";
-// import service2Image from "@/public/service2.jpg";
-// import service3Image from "@/public/service3.jpg";
 
 const ServicesPage: React.FC = () => {
     const [isMenuOpen, setIsMenuOpen] = useState(false);
@@ -21,7 +21,7 @@ const ServicesPage: React.FC = () => {
         <Image
             src={imageLogo}
             alt="Logo"
-            className="w-[180px] h-[60px] max-w-xs "
+            className="w-[180px] h-[60px] max-w-xs"
         />
     );
 
@@ -29,9 +29,10 @@ const ServicesPage: React.FC = () => {
         <Image
             src={imageLogoInverted}
             alt="Logo"
-            className="w-[200px] h-[85px] max-w-xs "
+            className="w-[200px] h-[85px] max-w-xs"
         />
     );
+
     return (
         <div className="flex flex-col min-h-screen">
             <header className="bg-white shadow-md w-full">
@@ -67,35 +68,37 @@ const ServicesPage: React.FC = () => {
                             </svg>
                         </button>
                     </div>
-                    {!isMenuOpen && (<ul className={`lg:flex space-x-8 ${isMenuOpen ? "block" : "hidden"} lg:block`}>
-                        <li>
-                            <a href="/" className="text-[#F092A1] hover:text-gray-900">
-                                INÍCIO
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/servicos" className="text-[#F092A1] hover:text-gray-900">
-                                SERVIÇOS
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/galeria" className="text-[#F092A1] hover:text-gray-900">
-                                GALERIA
-                            </a>
-                        </li>
-                        <li>
-                            <a href="/contato" className="text-[#F092A1] hover:text-gray-900">
-                                CONTATO
-                            </a>
-                        </li>
-                    </ul>)}
+                    <div className={`lg:flex space-x-8 ${isMenuOpen ? "block" : "hidden"}`}>
+                        <ul className="lg:flex space-x-8">
+                            <li>
+                                <a href="/" className="text-[#F092A1] hover:text-gray-900">
+                                    INÍCIO
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/servicos" className="text-[#F092A1] hover:text-gray-900">
+                                    SERVIÇOS
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/galeria" className="text-[#F092A1] hover:text-gray-900">
+                                    GALERIA
+                                </a>
+                            </li>
+                            <li>
+                                <a href="/contato" className="text-[#F092A1] hover:text-gray-900">
+                                    CONTATO
+                                </a>
+                            </li>
+                        </ul>
+                    </div>
                 </nav>
                 {isMenuOpen && (
                     <div className="lg:hidden block bg-white shadow-md p-4">
                         <ul className="flex flex-col space-y-4">
                             <li>
                                 <a href="/" className="text-[#F092A1] hover:text-gray-900">
-                                    INÍCIO
+                                    INÍCIO
                                 </a>
                             </li>
                             <li>
@@ -121,51 +124,52 @@ const ServicesPage: React.FC = () => {
             <main className="flex-grow p-8 bg-gray-100">
                 <section className="text-center mb-12">
                     <h1 className="text-3xl font-bold text-[#F092A1] mb-4">Nossos Serviços</h1>
-                    <p className="text-lg text-gray-700">
-                        Descubra os serviços excepcionais que oferecemos para atender suas necessidades. Cada serviço é cuidadosamente elaborado para garantir a máxima qualidade e satisfação.
-                    </p>
                 </section>
 
-                <section className="max-w-7xl mx-auto grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8 mb-12">
-                    <div className="bg-white shadow-lg rounded-lg p-6">
-                        {/* <Image src={service1Image} alt="Serviço 1" className="w-full h-40 object-cover rounded-t-lg" /> */}
-                        <h2 className="text-xl font-bold text-[#F092A1] mt-4">Serviço 1</h2>
+                <section className="flex flex-wrap max-w-7xl mx-auto mb-12">
+                    <div className="lg:w-1/2 w-full p-4">
+                        <Image
+                            src={AlongamentoFibradeVidro}
+                            alt="Alongamento Fibra de Vidro"
+                            className="w-full lg:h-[400px] h-auto object-cover rounded-lg"
+                        />
+                    </div>
+                    <div className="lg:w-1/2 w-full p-4">
+                        <h2 className="text-xl font-bold text-[#F092A1]">Alongamento Fibra de Vidro</h2>
                         <p className="text-gray-700 mt-2">
-                            Descrição do Serviço 1. Explique o que é oferecido e quais são os benefícios para o cliente.
+                        É uma técnica utilizada com filamentos de fibra de vidro que são moldados sobre a unha natural. Diferente da unha de gel, que o molde pronto e desenhado é a principal vertente para alongar as unhas, no alongamento com unhas de fibra de vidro o processo é diferente. Os filamentos de vidro são fixados com um gel nas unhas, moldados com o próprio formato da unha da cliente e finalizadas na cabine de luz UV led. O alongamento com fibra de vidro é conhecido por deixar as unhas com um aspecto mais natural comparado às outras técnicas de alongamento de unhas.
                         </p>
-                        <Button variant={"outline"} className="mt-4" onClick={() => {/* Handle click */ }}>Saiba mais</Button>
+                        <h2 className="text-xl mt-4 font-bold text-[#F092A1]">Manutenção Fibra de Vidro</h2>
+                        <p className="text-gray-700 mt-2">
+                        Na Manutenção de Unhas de Fibra de Vidro, é Retirado a Camada Superficial do Gel, Correção de Imperfeições e Reposição de Fibra de Vidro Quando necessário. Depois é Feita Uma Nova Camada de Gel, Cobrindo as Áreas Crescimento das Unhas Naturais e Renovando o Alongamento das Unhas no Período Recomendado.
+                        </p>
                     </div>
 
-                    <div className="bg-white shadow-lg rounded-lg p-6">
-                        {/* <Image src={service2Image} alt="Serviço 2" className="w-full h-40 object-cover rounded-t-lg" /> */}
-                        <h2 className="text-xl font-bold text-[#F092A1] mt-4">Serviço 2</h2>
+                    <div className="lg:w-1/2 w-full p-4">
+                        <Image
+                            src={BanhoDeGel}
+                            alt="Banho De Gel"
+                            className="w-full lg:h-[400px] h-auto object-cover rounded-lg"
+                        />
+                    </div>
+                    <div className="lg:w-1/2 w-full p-4">
+                        <h2 className="text-xl font-bold text-[#F092A1]">Banho De Gel</h2>
                         <p className="text-gray-700 mt-2">
-                            Descrição do Serviço 2. Detalhes sobre o que é oferecido e seus benefícios.
+                        O banho de gel trata-se de um procedimento de blindagem realizado nas unhas, através de um gel fortalecedor. O mesmo material usado no processo de alongar as unhas. Esse gel cria uma barreira fortalecedora que protege as unhas e favorece o crescimento delas desde o momento da aplicação.
                         </p>
-                        <Button variant={"outline"} className="mt-4" onClick={() => {/* Handle click */ }}>Saiba mais</Button>
                     </div>
 
-                    <div className="bg-white shadow-lg rounded-lg p-6">
-                        {/* <Image src={service3Image} alt="Serviço 3" className="w-full h-40 object-cover rounded-t-lg" /> */}
-                        <h2 className="text-xl font-bold text-[#F092A1] mt-4">Serviço 3</h2>
-                        <p className="text-gray-700 mt-2">
-                            Descrição do Serviço 3. Explique o serviço e os benefícios para o cliente.
-                        </p>
-                        <Button variant={"outline"} className="mt-4" onClick={() => {/* Handle click */ }}>Saiba mais</Button>
+                    <div className="lg:w-1/2 w-full p-4">
+                        <Image
+                            src={EsmaltacaoEmGel}
+                            alt="Esmaltação em Gel"
+                            className="w-full lg:h-[400px] h-auto object-cover rounded-lg"
+                        />
                     </div>
-                </section>
-
-                <section className="text-center mb-12">
-                    <h2 className="text-2xl font-bold text-[#F092A1] mb-6">Perguntas Frequentes</h2>
-                    <div className="text-left max-w-2xl mx-auto">
-                        <h3 className="text-xl font-semibold text-gray-800">Como posso solicitar um serviço?</h3>
+                    <div className="lg:w-1/2 w-full p-4">
+                        <h2 className="text-xl font-bold text-[#F092A1]">Esmaltação Em Gel</h2>
                         <p className="text-gray-700 mt-2">
-                            Você pode entrar em contato conosco através do botão de contato ou solicitar um orçamento diretamente no site.
-                        </p>
-
-                        <h3 className="text-xl font-semibold text-gray-800 mt-4">Qual é o tempo de espera para começar um serviço?</h3>
-                        <p className="text-gray-700 mt-2">
-                            O tempo de espera pode variar dependendo da demanda. Normalmente, entramos em contato em até 48 horas para confirmar detalhes.
+                        A principal diferença entre a esmaltação em gel e a esmaltação comum é a durabilidade. Os convencionais possuem duração de, aproximadamente, sete dias nas unhas. Ainda sim, há a possibilidade de descascar mais cedo, dependendo das tarefas do seu dia a dia. Enquanto a esmaltação em gel tem uma durabilidade de 15 a 25 dias, tirando a praticidade de sair seca da cabine e não descascar com facilidade.
                         </p>
                     </div>
                 </section>
@@ -174,7 +178,6 @@ const ServicesPage: React.FC = () => {
                     <Button
                         variant={"outline"}
                         className="px-6 py-3 bg-transparent text-[#F092A1] border-[#F092A1] rounded-lg hover:bg-[#F092A1] hover:text-white"
-                        onClick={() => {/* Handle contact click */ }}
                     >
                         Entre em Contato
                     </Button>
@@ -182,7 +185,7 @@ const ServicesPage: React.FC = () => {
             </main>
 
             <footer className="bg-[#F092A1] py-8 flex flex-wrap justify-center items-center space-y-8 lg:space-y-0 lg:space-x-14 text-center">
-                <div className="w-full lg:w-auto flex flex-col items-center ">
+                <div className="w-full lg:w-auto flex flex-col items-center">
                     {renderLogoInverted()}
                     <div className="flex justify-center space-x-4 mt-4">
                         <a
@@ -209,7 +212,6 @@ const ServicesPage: React.FC = () => {
                         >
                             <FaFacebook className="text-white text-4xl" />
                         </a>
-
                     </div>
                     <div className="flex justify-center space-x-4 mt-4 border-t border-white pt-4">
                         <p className="text-sm text-white">Todos os direitos Reservados Amanda Francheti</p>

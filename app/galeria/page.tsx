@@ -5,6 +5,9 @@ import { Modal } from "../components/modal";
 import Carrousel1 from "@/public/imagem1.jpg";
 import Carrousel2 from "@/public/imagem2.png";
 import Carrousel3 from "@/public/imagem3.jpg";
+import AlongamentoFibradeVidro from "@/public/AlongamentoFibradeVidro.jpg";
+import BanhoDeGel from "@/public/BanhoDeGel.jpg";
+import EsmaltacaoEmGel from "@/public/EsmaltaçãoEmGel.jpg";
 import imageLogo from "@/public/logoamanda.png";
 import imageLogoInverted from "@/public/logoinvertida.png";
 import { FaFacebook, FaInstagram, FaWhatsapp } from "react-icons/fa";
@@ -13,7 +16,10 @@ import { Button } from "@/components/ui/button";
 const images = [
     { src: Carrousel1, width: 800, height: 600 },
     { src: Carrousel2, width: 800, height: 600 },
-    { src: Carrousel3, width: 800, height: 600 }
+    { src: Carrousel3, width: 800, height: 600 },
+    { src: AlongamentoFibradeVidro, width: 800, height: 600 },
+    { src: BanhoDeGel, width: 800, height: 600 },
+    { src: EsmaltacaoEmGel, width: 800, height: 600 },
 ];
 
 const GalleryPage: React.FC = () => {

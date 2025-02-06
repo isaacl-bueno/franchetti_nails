@@ -138,7 +138,7 @@ const HomePage: React.FC = () => {
         }}
       >
         <h1 className="text-1xl mb-4 text-white">
-          Fibra de vidro | Acrílico moldado | Pasta acrílica | Unhas em gel | Esmaltação em gel
+          Fibra de vidro | Alongamento em fibra | Banho de gel | Esmaltação em gel
         </h1>
         <Button
           variant={"outline"}
@@ -187,8 +187,12 @@ const HomePage: React.FC = () => {
           <p className="text-lg text-gray-700 mb-6">
             Confira nossa galeria de fotos.
           </p>
-          <Button variant={"outline"} className="px-6 py-3 bg-transparent text-[#F092A1] border-[#F092A1] rounded-lg hover:bg-[#F092A1] hover:text-white">
-            Ver álbum
+           <Button
+              variant={"outline"}
+              className="px-6 py-3 bg-transparent text-[#F092A1] border-[#F092A1] rounded-lg hover:bg-[#F092A1] hover:text-white"
+              onClick={() => window.location.replace("/galeria")}
+          >
+              Ver álbum
           </Button>
         </div>
       </section>
@@ -201,10 +205,12 @@ const HomePage: React.FC = () => {
           <div className="lg:w-1/2 text-center lg:text-left">
             <h2 className="text-2xl text-[#F092A1] font-bold mb-6 mt-6">Amanda Francheti</h2>
             <p className="text-lg text-gray-700">
-              Sonhadora, guerreira, determinada e apaixonada pelo design de unhas! Eu sou Amanda Francheti,
-              especialista em alongamento de unhas com as melhores técnicas do mercado: acrílico moldado,
-              pasta acrílica, fibra de vidro, manicure russa, esmaltação em gel e muito mais!
-            </p>
+            Sonhadora, guerreira e determinada, sou apaixonada pelo design de unhas, 
+            utilizando as técnicas mais avançadas do mercado. Com 5 anos de experiência como nails designer e 
+            outros 2 anos na área da estética, hoje sou especialista e reconhecida pelo meu trabalho de alta qualidade.
+             Venha conhecer meu estúdio Francheti Nails e se encantar com meu trabalho, 
+             feito com todo o cuidado e dedicação que você merece!         
+             </p>
           </div>
         </div>
       </section>
