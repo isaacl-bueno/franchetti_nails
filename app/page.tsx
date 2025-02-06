@@ -206,8 +206,8 @@ const HomePage: React.FC = () => {
             <h2 className="text-2xl text-[#F092A1] font-bold mb-6 mt-6">Amanda Francheti</h2>
             <p className="text-lg text-gray-700">
             Sonhadora, guerreira e determinada, sou apaixonada pelo design de unhas, 
-            utilizando as técnicas mais avançadas do mercado. Com 5 anos de experiência como nails designer e 
-            outros 2 anos na área da estética, hoje sou especialista e reconhecida pelo meu trabalho de alta qualidade.
+            utilizando as técnicas mais avançadas do mercado. Com 4 anos de experiência como nails designer e 
+            outros 2 anos na área da estética, hoje sou reconhecida pelo meu trabalho de alta qualidade.
              Venha conhecer meu estúdio Francheti Nails e se encantar com meu trabalho, 
              feito com todo o cuidado e dedicação que você merece!         
              </p>
