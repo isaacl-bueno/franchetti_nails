@@ -68,30 +68,6 @@ const ServicesPage: React.FC = () => {
                             </svg>
                         </button>
                     </div>
-                    <div className={`lg:flex space-x-8 ${isMenuOpen ? "block" : "hidden"}`}>
-                        <ul className="lg:flex space-x-8">
-                            <li>
-                                <a href="/" className="text-[#F092A1] hover:text-gray-900">
-                                    INÍCIO
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/servicos" className="text-[#F092A1] hover:text-gray-900">
-                                    SERVIÇOS
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/galeria" className="text-[#F092A1] hover:text-gray-900">
-                                    GALERIA
-                                </a>
-                            </li>
-                            <li>
-                                <a href="/contato" className="text-[#F092A1] hover:text-gray-900">
-                                    CONTATO
-                                </a>
-                            </li>
-                        </ul>
-                    </div>
                 </nav>
                 {isMenuOpen && (
                     <div className="lg:hidden block bg-white shadow-md p-4">
@@ -136,11 +112,11 @@ const ServicesPage: React.FC = () => {
                     </div>
                     <div className="lg:w-1/2 w-full p-4">
                         <h2 className="text-xl font-bold text-[#F092A1]">Alongamento Fibra de Vidro</h2>
-                        <p className="text-gray-700 mt-2">
+                        <p className="text-gray-700 mt-2 text-lg">
                         É uma técnica utilizada com filamentos de fibra de vidro que são moldados sobre a unha natural. Diferente da unha de gel, que o molde pronto e desenhado é a principal vertente para alongar as unhas, no alongamento com unhas de fibra de vidro o processo é diferente. Os filamentos de vidro são fixados com um gel nas unhas, moldados com o próprio formato da unha da cliente e finalizadas na cabine de luz UV led. O alongamento com fibra de vidro é conhecido por deixar as unhas com um aspecto mais natural comparado às outras técnicas de alongamento de unhas.
                         </p>
                         <h2 className="text-xl mt-4 font-bold text-[#F092A1]">Manutenção Fibra de Vidro</h2>
-                        <p className="text-gray-700 mt-2">
+                        <p className="text-gray-700 mt-2 text-lg">
                         Na Manutenção de Unhas de Fibra de Vidro, é Retirado a Camada Superficial do Gel, Correção de Imperfeições e Reposição de Fibra de Vidro Quando necessário. Depois é Feita Uma Nova Camada de Gel, Cobrindo as Áreas Crescimento das Unhas Naturais e Renovando o Alongamento das Unhas no Período Recomendado.
                         </p>
                     </div>
@@ -154,7 +130,7 @@ const ServicesPage: React.FC = () => {
                     </div>
                     <div className="lg:w-1/2 w-full p-4">
                         <h2 className="text-xl font-bold text-[#F092A1]">Banho De Gel</h2>
-                        <p className="text-gray-700 mt-2">
+                        <p className="text-gray-700 mt-2 text-lg">
                         O banho de gel trata-se de um procedimento de blindagem realizado nas unhas, através de um gel fortalecedor. O mesmo material usado no processo de alongar as unhas. Esse gel cria uma barreira fortalecedora que protege as unhas e favorece o crescimento delas desde o momento da aplicação.
                         </p>
                     </div>
@@ -168,7 +144,7 @@ const ServicesPage: React.FC = () => {
                     </div>
                     <div className="lg:w-1/2 w-full p-4">
                         <h2 className="text-xl font-bold text-[#F092A1]">Esmaltação Em Gel</h2>
-                        <p className="text-gray-700 mt-2">
+                        <p className="text-gray-700 mt-2 text-lg">
                         A principal diferença entre a esmaltação em gel e a esmaltação comum é a durabilidade. Os convencionais possuem duração de, aproximadamente, sete dias nas unhas. Ainda sim, há a possibilidade de descascar mais cedo, dependendo das tarefas do seu dia a dia. Enquanto a esmaltação em gel tem uma durabilidade de 15 a 25 dias, tirando a praticidade de sair seca da cabine e não descascar com facilidade.
                         </p>
                     </div>
